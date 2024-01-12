@@ -9,8 +9,8 @@ import net.serenitybdd.screenplay.actions.Enter;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class CredentialsIntroduction implements Task {
-    String email;
-    String password;
+   private String email;
+    private String password;
 
     public CredentialsIntroduction(String email, String password) {
         this.email = email;

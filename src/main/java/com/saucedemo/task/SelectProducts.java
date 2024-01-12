@@ -13,19 +13,23 @@ import java.util.concurrent.Callable;
 import static com.saucedemo.userinterfaces.SaucedemoHomePage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class SelectProduct implements Task, Callable<Product> {
+public class SelectProducts implements Task, Callable<List<Product>> {
 
     private Product products;
     private Random randomProduct;
     private int productToAdd;
+    private int quantity;
     private List<WebElementFacade> ListProductsBtn;
     private List<WebElementFacade> ListProductsName;
     private List<WebElementFacade> ListProductsPrice;
     private List<WebElementFacade> ListProductsDescription;
 
+    List<Product> ListProduct;
 
-    public SelectProduct(Product products) {
-        this.products = products;
+    public SelectProducts(List<Product> listProduct, int quantity) {
+
+        this.ListProduct = listProduct;
+        this.quantity = quantity;
     }
 
     @Override
@@ -37,22 +41,28 @@ public class SelectProduct implements Task, Callable<Product> {
         ListProductsPrice = PRODUCT_PRICE.resolveAllFor(actor);
         ListProductsDescription = PRODUCT_DESCRIPTION.resolveAllFor(actor);
 
-        products.setName(ListProductsName.get(productToAdd).getText());
-        products.setPrice(ListProductsPrice.get(productToAdd).getText().replace("$", ""));
-        products.setDescription(ListProductsDescription.get(productToAdd).getText());
+        for (int i = 0; i < quantity; i++) {
+            products = new Product(
+                    ListProductsName.get(i).getTextContent(),
+                    ListProductsPrice.get(i).getTextContent().replace("$", ""),
+                    ListProductsDescription.get(i).getTextContent());
+            ListProduct.add(products);
+        }
+
         call();
-        actor.attemptsTo(
-                Click.on(ListProductsBtn.get(productToAdd))
-        );
+        for (int i = 0; i < quantity; i++) {
+            actor.attemptsTo(
+                    Click.on(ListProductsBtn.get(i))
+            );
+        }
     }
 
     @Override
-    public Product call() {
-        return products;
+    public List<Product> call() {
+        return ListProduct;
     }
 
-    public static SelectProduct intoSaucedemo(Product product) {
-
-        return instrumented(SelectProduct.class, product);
+    public static SelectProducts intoSaucedemo(List<Product> ListProduct, int quantity) {
+        return instrumented(SelectProducts.class, ListProduct, quantity);
     }
 }

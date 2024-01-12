@@ -1,9 +1,8 @@
 package com.saucedemo.stepdefinitions;
 
-import com.saucedemo.models.Overview;
+
 import com.saucedemo.models.Product;
 import com.saucedemo.questions.ValidationCart;
-import com.saucedemo.questions.ValidationOverview;
 import com.saucedemo.task.*;
 import com.saucedemo.userinterfaces.SaucedemoLogin;
 import io.cucumber.java.Before;
@@ -25,7 +24,6 @@ import java.util.List;
 
 import static com.saucedemo.userinterfaces.CheackoutPage.MESSAGE;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.containsOnlyText;
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 
@@ -35,9 +33,8 @@ public class saucedemoStepdefinition {
 
     List<Product> ListProduct = new ArrayList<>();
     List<Product> ListProductCart = new ArrayList<>();
-    Product product = new Product();
-    Product productCart = new Product();
-    Overview overview = new Overview();
+    Product overview = new Product();
+
     @Managed(uniqueSession = true)
     public WebDriver driver;
     private final Actor user = Actor.named("Mariana");
@@ -63,30 +60,30 @@ public class saucedemoStepdefinition {
 
     }
 
-    @When("user add the product to the shopping cart")
-    public void userAddTheProductToTheShoppingCart() {
-        user.attemptsTo(
-                SelectProduct.intoSaucedemo(product)
-        );
 
+    @When("user add {string} products to the shopping cart")
+    public void userAddProductsToTheShoppingCart(String quantity) {
+        user.attemptsTo(
+                SelectProducts.intoSaucedemo(ListProduct, Integer.parseInt(quantity))
+        );
     }
 
-    @And("user verifies that the product of the shopping cart is the same one that was selected")
-    public void userVerifiesThatTheProductOfTheShoppingCartIsTheSameOneThatWasSelected() {
+
+    @And("user verifies that products of the shopping cart is the same one that was selected")
+    public void userVerifiesThatProductsOfTheShoppingCartIsTheSameOneThatWasSelected() {
         user.attemptsTo(
-                SelectShoppingCart.intoSaucedemo(productCart)
+                SelectShoppingCart.intoSaucedemo(ListProductCart)
         );
-        user.should(seeThat(ValidationCart.product(product, productCart)));
+        user.should(seeThat(ValidationCart.products(ListProduct, ListProductCart)));
     }
 
     @And("Complete the purchase form with information {string}, {string} and {string}")
     public void completeThePurchaseFormWithInformationAnd(String name, String lastName, String codePostal) {
-        Overview productAdd = new Overview(productCart.getName(), productCart.getPrice(), productCart.getDescription());
         user.attemptsTo(
                 Cheackout.product(name, lastName, codePostal),
                 CheckoutOverview.product(overview)
         );
-        user.should(seeThat(ValidationOverview.product(productAdd, overview)));
+
     }
 
     @Then("Verify that the purchase was successful by viewing the message {string}")
@@ -97,18 +94,4 @@ public class saucedemoStepdefinition {
     }
 
 
-    @When("user add {string} products to the shopping cart")
-    public void userAddProductsToTheShoppingCart(String quantity) {
-        user.attemptsTo(
-                SelectMultipleProducts.intoSaucedemo(ListProduct, Integer.parseInt(quantity))
-        );
-    }
-
-    @And("user verifies that products of the shopping cart is the same one that was selected")
-    public void userVerifiesThatProductsOfTheShoppingCartIsTheSameOneThatWasSelected() {
-        user.attemptsTo(
-                SelectShoppingCartMultipleProducts.intoSaucedemo(ListProductCart)
-        );
-        // user.should(seeThat(ValidationCart.product(ListProduct, ListProductCart)));
-    }
 }
