@@ -1,29 +1,29 @@
 package com.saucedemo.questions;
 
+import com.saucedemo.models.Overview;
 import com.saucedemo.models.Product;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-public class ValidationCart implements Question<Boolean> {
+public class ValidationOverview implements Question<Boolean> {
 
-    private Product product;
-    private Product productCart;
+    private Overview productAdd;
+    private Overview overview;
 
-    public ValidationCart(Product product, Product productCart) {
-        this.product = product;
-        this.productCart = productCart;
+    public ValidationOverview(Overview product, Overview overview) {
+        this.productAdd = product;
+        this.overview = overview;
     }
-
-
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        return productCart.getName().equals(product.getName())
-                && productCart.getPrice().equals(product.getPrice())
-                && productCart.getDescription().equals(product.getDescription());
+        return overview.getName().equals(productAdd.getName())
+                && overview.getPrice().equals(productAdd.getPrice())
+                && overview.getDescription().equals(productAdd.getDescription())
+                && overview.getTotal().equals(String.valueOf(overview.CalculatorTotal()));
     }
 
-    public static ValidationCart product(Product product, Product productCart) {
-        return new ValidationCart(product, productCart);
+    public static ValidationOverview product(Overview product, Overview overview) {
+        return new ValidationOverview(product, overview);
     }
 }

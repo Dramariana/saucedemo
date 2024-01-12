@@ -1,19 +1,60 @@
-plugins {
-    id 'java'
+System.setProperty("user.dir", projectDir.toString())
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+
+    }
+    ext {
+        serenityVersion = '3.1.1'
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:$rootProject.ext.serenityVersion")
+    }
 }
+
+
+apply plugin: 'java'
+
 
 group 'org.example'
 version '1.0-SNAPSHOT'
 
+
 repositories {
+    mavenLocal()
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation "net.serenity-bdd:serenity-core:$rootProject.ext.serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-junit:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-cucumber:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-rest-assured:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay-rest:$rootProject.ext.serenityVersion"
+
+    testImplementation('junit:junit:4.12')
+    testImplementation('org.slf4j:slf4j-simple:1.7.7')
+
+
 }
 
-test {
-    useJUnitPlatform()
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }
+tasks.withType(Test) {
+    systemProperties = System.properties as Map<String, ?>
+    maxParallelForks = Runtime.runtime.availableProcessors()
+}
+
+gradle.startParameter.continueOnFailure = true
+

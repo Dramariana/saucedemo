@@ -28,9 +28,11 @@ public class SelectShoppingCart implements Task, Callable<Product> {
         );
 
         this.productCart.setName(PRODUCT_NAME_CART.resolveFor(actor).getTextContent());
-        this.productCart.setPrice(PRODUCT_PRICE_CART.resolveFor(actor).getTextContent());
+        this.productCart.setPrice(PRODUCT_PRICE_CART.resolveFor(actor).getTextContent().replace("$", ""));
         this.productCart.setDescription(PRODUCT_DESCRIPTION_CART.resolveFor(actor).getTextContent());
         call();
+        actor.attemptsTo(
+        Click.on(CHEACKOUT_BTN));
     }
 
     @Override

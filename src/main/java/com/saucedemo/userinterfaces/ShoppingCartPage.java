@@ -8,18 +8,13 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 
-public class SaucedemoHomePage extends PageObject {
-
-	public static final Target CONTAINER = Target.the("container").located(By.id("inventory_container"));
-	public static final Target PRODUCT_NAME= Target.the("product name").located(By.className("inventory_item_name"));
-	public static final Target PRODUCT_PRICE= Target.the("product price").located(By.className("inventory_item_price"));
-	public static final Target PRODUCT_DESCRIPTION= Target.the("product description").located(By.className("inventory_item_desc"));
-	public static final Target ADD_CART_BTN= Target.the("add to cart").located(By.xpath("//button[contains(@id, 'add-to-cart')]"));
-	public static final Target SHOPPING_CART= Target.the("shopping cart").located(By.id("shopping_cart_container"));
+public class ShoppingCartPage extends PageObject {
 
 
-	@Override
-	public List<WebElement> thenReturnElementList(By byListCriteria) {
-		return super.thenReturnElementList(byListCriteria);
-	}
+	public static final Target PRODUCT_NAME_CART= Target.the("product name cart").located(By.className("inventory_item_name"));
+	public static final Target PRODUCT_PRICE_CART= Target.the("product price cart ").located(By.className("inventory_item_price"));
+	public static final Target PRODUCT_DESCRIPTION_CART= Target.the("product description cart ").located(By.className("inventory_item_desc"));
+	public static final Target CONTINUE_SHOPPING_BTN= Target.the("continue shopping btn ").located(By.id("continue-shopping"));
+	public static final Target CHEACKOUT_BTN= Target.the("cheackout btn ").located(By.id("checkout"));
+
 }

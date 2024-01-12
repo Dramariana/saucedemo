@@ -8,16 +8,13 @@ import net.serenitybdd.screenplay.actions.Enter;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class Login implements Task {
+public class CredentialsIntroduction implements Task {
     String email;
     String password;
 
-    public Login(String email, String password){
+    public CredentialsIntroduction(String email, String password) {
         this.email = email;
         this.password = password;
-    }
-    public static Login intoThePage(String email, String password) {
-        return instrumented(Login.class, email, password);
     }
 
     @Override
@@ -27,5 +24,9 @@ public class Login implements Task {
                 Enter.theValue(password).into(SaucedemoLogin.PASSWORD).
                         then(Click.on(SaucedemoLogin.LOGIN_BUTTON))
         );
+    }
+
+    public static CredentialsIntroduction intoThePage(String email, String password) {
+        return instrumented(CredentialsIntroduction.class, email, password);
     }
 }

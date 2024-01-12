@@ -13,18 +13,18 @@ import java.util.concurrent.Callable;
 import static com.saucedemo.userinterfaces.SaucedemoHomePage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class SelectProduct2 implements Task, Callable<Product> {
+public class SelectProduct implements Task, Callable<Product> {
 
-    Product products;
-    Random randomProduct;
-    int productToAdd;
-    List<WebElementFacade> ListProductsBtn;
-    List<WebElementFacade> ListProductsName;
-    List<WebElementFacade> ListProductsPrice;
-    List<WebElementFacade> ListProductsDescription;
+    private Product products;
+    private Random randomProduct;
+    private int productToAdd;
+    private List<WebElementFacade> ListProductsBtn;
+    private List<WebElementFacade> ListProductsName;
+    private List<WebElementFacade> ListProductsPrice;
+    private List<WebElementFacade> ListProductsDescription;
 
 
-    public SelectProduct2(Product products) {
+    public SelectProduct(Product products) {
         this.products = products;
     }
 
@@ -38,7 +38,7 @@ public class SelectProduct2 implements Task, Callable<Product> {
         ListProductsDescription = PRODUCT_DESCRIPTION.resolveAllFor(actor);
 
         products.setName(ListProductsName.get(productToAdd).getText());
-        products.setPrice(ListProductsPrice.get(productToAdd).getText());
+        products.setPrice(ListProductsPrice.get(productToAdd).getText().replace("$", ""));
         products.setDescription(ListProductsDescription.get(productToAdd).getText());
         call();
         actor.attemptsTo(
@@ -51,7 +51,8 @@ public class SelectProduct2 implements Task, Callable<Product> {
         return products;
     }
 
-    public static SelectProduct2 intoSaucedemo(Product product) {
-        return instrumented(SelectProduct2.class, product);
+    public static SelectProduct intoSaucedemo(Product product) {
+
+        return instrumented(SelectProduct.class, product);
     }
 }

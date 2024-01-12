@@ -4,15 +4,17 @@ import com.saucedemo.models.Product;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-public class Validation implements Question<Boolean> {
+public class ValidationCart implements Question<Boolean> {
 
     private Product product;
     private Product productCart;
 
-    public Validation(Product product, Product productCart) {
+    public ValidationCart(Product product, Product productCart) {
         this.product = product;
         this.productCart = productCart;
     }
+
+
 
     @Override
     public Boolean answeredBy(Actor actor) {
@@ -21,7 +23,7 @@ public class Validation implements Question<Boolean> {
                 && productCart.getDescription().equals(product.getDescription());
     }
 
-    public static Validation product(Product product, Product productCart) {
-        return new Validation(product, productCart);
+    public static ValidationCart product(Product product, Product productCart) {
+        return new ValidationCart(product, productCart);
     }
 }

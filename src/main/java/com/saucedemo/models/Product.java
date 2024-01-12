@@ -1,19 +1,19 @@
 package com.saucedemo.models;
 
-import java.util.List;
-
-public class Products {
+public class Product {
 
     private String name;
     private String price;
     private String description;
 
-    //private List<Products> finalList;
 
-    public Products(String name, String price,String description) {
+    public Product(String name, String price, String description) {
         this.name = name;
         this.price = price;
         this.description = description;
+    }
+
+    public Product() {
     }
 
     public String getName() {

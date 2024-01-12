@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03e888eb-f7dd-48a8-810b-a920a1effc5f" name="Changes" comment="" />
+    <list default="true" id="03e888eb-f7dd-48a8-810b-a920a1effc5f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serenity.properties" beforeDir="false" afterPath="$PROJECT_DIR$/serenity.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/models/Overview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/models/Overview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/questions/ValidationCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/questions/ValidationCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/questions/ValidationOverview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/questions/ValidationOverview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/Cheackout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/Cheackout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/CheckoutOverview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/CheckoutOverview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/CredentialsIntroduction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/CredentialsIntroduction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/SelectMultipleProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/SelectMultipleProducts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/SelectProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/SelectProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/SelectShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/SelectShoppingCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/SelectShoppingCartMultipleProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/SelectShoppingCartMultipleProducts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/userinterfaces/CheackoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/userinterfaces/CheackoutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/userinterfaces/SaucedemoHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/userinterfaces/SaucedemoHomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/userinterfaces/SaucedemoLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/userinterfaces/SaucedemoLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/userinterfaces/ShoppingCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/userinterfaces/ShoppingCartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/runners/saucedemoRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/runners/saucedemoRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/stepdefinitions/saucedemoStepdefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/stepdefinitions/saucedemoStepdefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/saucedemo.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/saucedemo.feature" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +37,38 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="saucedemo" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2aoUm6esUrHUZQWRbfgiZiO0kzx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -27,9 +79,57 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/maria/IdeaProjects/saucedemo/src/main/java/com/saucedemo/userinterfaces"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\maria\IdeaProjects\saucedemo\src\main\java\com\saucedemo\userinterfaces" />
+      <recent name="C:\Users\maria\IdeaProjects\saucedemo\src\test\resources\features" />
+      <recent name="C:\Users\maria\IdeaProjects\saucedemo\src\test\resources\drivers" />
+      <recent name="C:\Users\maria\IdeaProjects\saucedemo" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.saucedemo.task" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.saucedemo.questions" />
+      <recent name="com.saucedemo.userinterfaces" />
+      <recent name="com.saucedemo.task" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="saucedemoRunner" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.saucedemo.runners.saucedemoRunner&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.saucedemoRunner" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -40,5 +140,16 @@
       <updated>1704984583138</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/saucedemo/models/Overview.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

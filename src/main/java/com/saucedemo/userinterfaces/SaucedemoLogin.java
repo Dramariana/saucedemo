@@ -1,4 +1,4 @@
-package co.com.saucedemo.userinterfaces;
+package com.saucedemo.userinterfaces;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;

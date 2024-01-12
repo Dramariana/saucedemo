@@ -13,20 +13,23 @@ import java.util.concurrent.Callable;
 import static com.saucedemo.userinterfaces.SaucedemoHomePage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class SelectProduct implements Task, Callable<List<Product>> {
+public class SelectMultipleProducts implements Task, Callable<List<Product>> {
 
-    Product products;
-    Random randomProduct;
-    int productToAdd;
-    List<WebElementFacade> ListProductsBtn;
-    List<WebElementFacade> ListProductsName;
-    List<WebElementFacade> ListProductsPrice;
-    List<WebElementFacade> ListProductsDescription;
+    private Product products;
+    private Random randomProduct;
+    private int productToAdd;
+    private int quantity;
+    private List<WebElementFacade> ListProductsBtn;
+    private List<WebElementFacade> ListProductsName;
+    private List<WebElementFacade> ListProductsPrice;
+    private List<WebElementFacade> ListProductsDescription;
 
     List<Product> ListProduct;
 
-    public SelectProduct(List<Product> listProduct) {
-        ListProduct = listProduct;
+    public SelectMultipleProducts(List<Product> listProduct, int quantity) {
+
+        this.ListProduct = listProduct;
+        this.quantity = quantity;
     }
 
     @Override
@@ -37,20 +40,19 @@ public class SelectProduct implements Task, Callable<List<Product>> {
         ListProductsName = PRODUCT_NAME.resolveAllFor(actor);
         ListProductsPrice = PRODUCT_PRICE.resolveAllFor(actor);
         ListProductsDescription = PRODUCT_DESCRIPTION.resolveAllFor(actor);
-/*        for (int i = 0; i < ListProductsBtn.size(); i++) {
-            products = new Products(ListProductsName.get(i).getText(),
+        for (int i = 0; i < quantity; i++) {
+            products = new Product(ListProductsName.get(i).getText(),
                     ListProductsPrice.get(i).getText(),
                     ListProductsDescription.get(i).getText());
             ListProduct.add(products);
-        }*/
-        products = new Product(ListProductsName.get(productToAdd).getText(),
-                ListProductsPrice.get(productToAdd).getText(),
-                ListProductsDescription.get(productToAdd).getText());
-        ListProduct.add(products);
+        }
+
         call();
-        actor.attemptsTo(
-                Click.on(ListProductsBtn.get(productToAdd))
-        );
+        for (int i = 0; i < quantity; i++) {
+            actor.attemptsTo(
+                    Click.on(ListProductsBtn.get(i))
+            );
+        }
     }
 
     @Override
@@ -58,7 +60,7 @@ public class SelectProduct implements Task, Callable<List<Product>> {
         return ListProduct;
     }
 
-    public static SelectProduct intoSaucedemo(List<Product> ListProduct) {
-        return instrumented(SelectProduct.class, ListProduct);
+    public static SelectMultipleProducts intoSaucedemo(List<Product> ListProduct, int quantity) {
+        return instrumented(SelectMultipleProducts.class, ListProduct, quantity);
     }
 }
