@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">saucedemo</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="feature_saucedemo_page.html">Saucedemo Page</a></span>
+                > <span class="truncate-60"><a
+                    href="saucedemo_page_add_multiples_products_to_the_shopping_cart.html">add multiples products to the shopping cart </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="requirement_type_feature.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 12-01-2024 17:41</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Saucedemo Page </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="tag_run.html">Run
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">add multiples products to the shopping cart
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given User enters saucedemo site<br>And User login with "&lt;email&gt;" and "&lt;password&gt;"<br>When user add "&lt;quantity&gt;" products to the shopping cart<br>And user verifies that products of the shopping cart is the same one that was selected<br>And Complete the purchase form with information "&lt;name&gt;", "&lt;lastName&gt;" and "&lt;codePostal&gt;"<br>Then Verify that the purchase was successful by viewing the message "&lt;message&gt;"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="617f1f8673a8f1dca39bfa514c445b81effc9b68a95d988b37fee6b75974ed91.png" title=" 1: add multiples products to the shopping cart ({email=standard_user, password=secret_sauce, message=Thank you for your order!, name=Mariana, lastName=Uribe, codePostal=05555, quantity=1})" width="1366"/>
+                <img src="617f1f8673a8f1dca39bfa514c445b81effc9b68a95d988b37fee6b75974ed91.png" title=" Given User enters saucedemo site" width="1366"/>
+                <img src="617f1f8673a8f1dca39bfa514c445b81effc9b68a95d988b37fee6b75974ed91.png" title=" Mariana opens the Saucedemo login" width="1366"/>
+                <img src="617f1f8673a8f1dca39bfa514c445b81effc9b68a95d988b37fee6b75974ed91.png" title=" Given User enters saucedemo site (completed)" width="1366"/>
+                <img src="ced0bfb59bd37eb3dd211c030934c291bc1956dcc0430963b1fd2b72f0800308.png" title=" And User login with &quot;standard_user&quot; and &quot;secret_sauce&quot;" width="1366"/>
+                <img src="ced0bfb59bd37eb3dd211c030934c291bc1956dcc0430963b1fd2b72f0800308.png" title=" Mariana credentials introduction" width="1366"/>
+                <img src="ced0bfb59bd37eb3dd211c030934c291bc1956dcc0430963b1fd2b72f0800308.png" title=" Mariana enters 'standard_user' into user name" width="1366"/>
+                <img src="acf22bdccfe5fc136d81d50101fdedd6ed3c1ebbe6c4a5cc14e5856aef9c4c47.png" title=" Mariana enters 'secret_sauce' into password" width="1366"/>
+                <img src="c4f1e379fabfc5981bc0ad90d7642fcc32babc9d12854d1a3ed9110ad7eed1f4.png" title=" Mariana clicks on Login btn" width="1366"/>
+                <img src="c4f1e379fabfc5981bc0ad90d7642fcc32babc9d12854d1a3ed9110ad7eed1f4.png" title=" Mariana credentials introduction (completed)" width="1366"/>
+                <img src="c4f1e379fabfc5981bc0ad90d7642fcc32babc9d12854d1a3ed9110ad7eed1f4.png" title=" And User login with &quot;standard_user&quot; and &quot;secret_sauce&quot; (completed)" width="1366"/>
+                <img src="09003ddad929a80b97487cb11ed74e553a0b0356aec7d20fa21d18d5d49156c8.png" title=" When user add &quot;1&quot; products to the shopping cart" width="1366"/>
+                <img src="09003ddad929a80b97487cb11ed74e553a0b0356aec7d20fa21d18d5d49156c8.png" title=" Mariana select products" width="1366"/>
+                <img src="09003ddad929a80b97487cb11ed74e553a0b0356aec7d20fa21d18d5d49156c8.png" title=" Mariana clicks on [[FirefoxDriver: firefox on WINDOWS (ef2fe9ba-30d7-46cd-ba35-aea42b33d470)] -&gt; xpath: //button[contains(@id, 'add-to-cart')]]" width="1366"/>
+                <img src="09003ddad929a80b97487cb11ed74e553a0b0356aec7d20fa21d18d5d49156c8.png" title=" Mariana select products (completed)" width="1366"/>
+                <img src="09003ddad929a80b97487cb11ed74e553a0b0356aec7d20fa21d18d5d49156c8.png" title=" When user add &quot;1&quot; products to the shopping cart (completed)" width="1366"/>
+                <img src="b7d46139b260cd634678327fa0b7d11b3840b0da8ce5758f5056daa05e6c448f.png" title=" And user verifies that products of the shopping cart is the same one that was selected" width="1366"/>
+                <img src="b7d46139b260cd634678327fa0b7d11b3840b0da8ce5758f5056daa05e6c448f.png" title=" Mariana select shopping cart" width="1366"/>
+                <img src="b7d46139b260cd634678327fa0b7d11b3840b0da8ce5758f5056daa05e6c448f.png" title=" Mariana clicks on shopping cart" width="1366"/>
+                <img src="f34a1aa325269d921c581bb5cd3005b4850eb63ca1010bd99c893d2c25cd08cf.png" title=" Mariana clicks on cheackout btn " width="1366"/>
+                <img src="f34a1aa325269d921c581bb5cd3005b4850eb63ca1010bd99c893d2c25cd08cf.png" title=" Mariana select shopping cart (completed)" width="1366"/>
+                <img src="f34a1aa325269d921c581bb5cd3005b4850eb63ca1010bd99c893d2c25cd08cf.png" title=" Then validation cart" width="1366"/>
+                <img src="f34a1aa325269d921c581bb5cd3005b4850eb63ca1010bd99c893d2c25cd08cf.png" title=" And user verifies that products of the shopping cart is the same one that was selected (completed)" width="1366"/>
+                <img src="f34a1aa325269d921c581bb5cd3005b4850eb63ca1010bd99c893d2c25cd08cf.png" title=" And Complete the purchase form with information &quot;Mariana&quot;, &quot;Uribe&quot; and &quot;05555&quot;" width="1366"/>
+                <img src="f34a1aa325269d921c581bb5cd3005b4850eb63ca1010bd99c893d2c25cd08cf.png" title=" Mariana cheackout" width="1366"/>
+                <img src="f34a1aa325269d921c581bb5cd3005b4850eb63ca1010bd99c893d2c25cd08cf.png" title=" Mariana clicks on first name" width="1366"/>
+                <img src="14248f1d5dd65547869c7c097d09e014fa950d2fd525ba17452cef69ae9ea95a.png" title=" Mariana enters 'Mariana' into first name" width="1366"/>
+                <img src="3a807b94effe17038248e7b29fdb85d36070b5956c0c2b1a83ea0d6479e2c147.png" title=" Mariana enters 'Uribe' into last name" width="1366"/>
+                <img src="98ba5d9cf27af3c136da297907e8e73a437f353e803c1a23de306269f3c46e7c.png" title=" Mariana enters '05555' into postal code" width="1366"/>
+                <img src="78b1a2dec5835d3b34995509ab92905aabc6bbca861b065967d827ecab28b8e1.png" title=" Mariana clicks on continue btn " width="1366"/>
+                <img src="78b1a2dec5835d3b34995509ab92905aabc6bbca861b065967d827ecab28b8e1.png" title=" Mariana cheackout (completed)" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" Mariana checkout overview" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" Mariana clicks on finish btn " width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" Mariana checkout overview (completed)" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" And Complete the purchase form with information &quot;Mariana&quot;, &quot;Uribe&quot; and &quot;05555&quot; (completed)" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" Then Verify that the purchase was successful by viewing the message &quot;Thank you for your order!&quot;" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" Then finish message  should be  an element containing only 'Thank you for your order!'" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" Then Verify that the purchase was successful by viewing the message &quot;Thank you for your order!&quot; (completed)" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" 1: add multiples products to the shopping cart ({email=standard_user, password=secret_sauce, message=Thank you for your order!, name=Mariana, lastName=Uribe, codePostal=05555, quantity=1}) (completed)" width="1366"/>
+                <img src="617f1f8673a8f1dca39bfa514c445b81effc9b68a95d988b37fee6b75974ed91.png" title=" 2: add multiples products to the shopping cart ({email=standard_user, password=secret_sauce, message=Thank you for your order!, name=Mariana, lastName=Uribe, codePostal=05555, quantity=2})" width="1366"/>
+                <img src="617f1f8673a8f1dca39bfa514c445b81effc9b68a95d988b37fee6b75974ed91.png" title=" Given User enters saucedemo site" width="1366"/>
+                <img src="617f1f8673a8f1dca39bfa514c445b81effc9b68a95d988b37fee6b75974ed91.png" title=" Mariana opens the Saucedemo login" width="1366"/>
+                <img src="617f1f8673a8f1dca39bfa514c445b81effc9b68a95d988b37fee6b75974ed91.png" title=" Given User enters saucedemo site (completed)" width="1366"/>
+                <img src="ced0bfb59bd37eb3dd211c030934c291bc1956dcc0430963b1fd2b72f0800308.png" title=" And User login with &quot;standard_user&quot; and &quot;secret_sauce&quot;" width="1366"/>
+                <img src="ced0bfb59bd37eb3dd211c030934c291bc1956dcc0430963b1fd2b72f0800308.png" title=" Mariana credentials introduction" width="1366"/>
+                <img src="ced0bfb59bd37eb3dd211c030934c291bc1956dcc0430963b1fd2b72f0800308.png" title=" Mariana enters 'standard_user' into user name" width="1366"/>
+                <img src="acf22bdccfe5fc136d81d50101fdedd6ed3c1ebbe6c4a5cc14e5856aef9c4c47.png" title=" Mariana enters 'secret_sauce' into password" width="1366"/>
+                <img src="c4f1e379fabfc5981bc0ad90d7642fcc32babc9d12854d1a3ed9110ad7eed1f4.png" title=" Mariana clicks on Login btn" width="1366"/>
+                <img src="c4f1e379fabfc5981bc0ad90d7642fcc32babc9d12854d1a3ed9110ad7eed1f4.png" title=" Mariana credentials introduction (completed)" width="1366"/>
+                <img src="c4f1e379fabfc5981bc0ad90d7642fcc32babc9d12854d1a3ed9110ad7eed1f4.png" title=" And User login with &quot;standard_user&quot; and &quot;secret_sauce&quot; (completed)" width="1366"/>
+                <img src="09003ddad929a80b97487cb11ed74e553a0b0356aec7d20fa21d18d5d49156c8.png" title=" When user add &quot;2&quot; products to the shopping cart" width="1366"/>
+                <img src="09003ddad929a80b97487cb11ed74e553a0b0356aec7d20fa21d18d5d49156c8.png" title=" Mariana select products" width="1366"/>
+                <img src="09003ddad929a80b97487cb11ed74e553a0b0356aec7d20fa21d18d5d49156c8.png" title=" Mariana clicks on [[FirefoxDriver: firefox on WINDOWS (5331b8d0-08f0-40f7-8aef-fde8eb649df3)] -&gt; xpath: //button[contains(@id, 'add-to-cart')]]" width="1366"/>
+                <img src="fc8a4ee1203ecf811890e1534a224b0555f6ba75e1800b9885b2cdc980658476.png" title=" Mariana clicks on [[FirefoxDriver: firefox on WINDOWS (5331b8d0-08f0-40f7-8aef-fde8eb649df3)] -&gt; xpath: //button[contains(@id, 'add-to-cart')]]" width="1366"/>
+                <img src="fc8a4ee1203ecf811890e1534a224b0555f6ba75e1800b9885b2cdc980658476.png" title=" Mariana select products (completed)" width="1366"/>
+                <img src="fc8a4ee1203ecf811890e1534a224b0555f6ba75e1800b9885b2cdc980658476.png" title=" When user add &quot;2&quot; products to the shopping cart (completed)" width="1366"/>
+                <img src="48604b65f906df64e78b6c3dfa8c8b12ab99396ffa042c86e2855eab47430a7d.png" title=" And user verifies that products of the shopping cart is the same one that was selected" width="1366"/>
+                <img src="48604b65f906df64e78b6c3dfa8c8b12ab99396ffa042c86e2855eab47430a7d.png" title=" Mariana select shopping cart" width="1366"/>
+                <img src="48604b65f906df64e78b6c3dfa8c8b12ab99396ffa042c86e2855eab47430a7d.png" title=" Mariana clicks on shopping cart" width="1366"/>
+                <img src="893014375f03686fcae722948d99232487122fed94ea57ab320f0ca636f3f91f.png" title=" Mariana clicks on cheackout btn " width="1366"/>
+                <img src="893014375f03686fcae722948d99232487122fed94ea57ab320f0ca636f3f91f.png" title=" Mariana select shopping cart (completed)" width="1366"/>
+                <img src="893014375f03686fcae722948d99232487122fed94ea57ab320f0ca636f3f91f.png" title=" Then validation cart" width="1366"/>
+                <img src="893014375f03686fcae722948d99232487122fed94ea57ab320f0ca636f3f91f.png" title=" And user verifies that products of the shopping cart is the same one that was selected (completed)" width="1366"/>
+                <img src="893014375f03686fcae722948d99232487122fed94ea57ab320f0ca636f3f91f.png" title=" And Complete the purchase form with information &quot;Mariana&quot;, &quot;Uribe&quot; and &quot;05555&quot;" width="1366"/>
+                <img src="893014375f03686fcae722948d99232487122fed94ea57ab320f0ca636f3f91f.png" title=" Mariana cheackout" width="1366"/>
+                <img src="893014375f03686fcae722948d99232487122fed94ea57ab320f0ca636f3f91f.png" title=" Mariana clicks on first name" width="1366"/>
+                <img src="2eaa7a293b33e3a8bee47162bc507400e986b9fdd034f9749a476262de9e3fec.png" title=" Mariana enters 'Mariana' into first name" width="1366"/>
+                <img src="ae8e30154dc0169b473da6042b4075380f4f893ea2c4032966982c679d544549.png" title=" Mariana enters 'Uribe' into last name" width="1366"/>
+                <img src="0815f6cb9184110399a9693270653794bd5b729c5ec7af0ee798a2ca55f23f50.png" title=" Mariana enters '05555' into postal code" width="1366"/>
+                <img src="5b3458b6d5fbdb696499da33036389eea77ee2284b096181fa3c78c8f59ffc78.png" title=" Mariana clicks on continue btn " width="1366"/>
+                <img src="5b3458b6d5fbdb696499da33036389eea77ee2284b096181fa3c78c8f59ffc78.png" title=" Mariana cheackout (completed)" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" Mariana checkout overview" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" Mariana clicks on finish btn " width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" Mariana checkout overview (completed)" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" And Complete the purchase form with information &quot;Mariana&quot;, &quot;Uribe&quot; and &quot;05555&quot; (completed)" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" Then Verify that the purchase was successful by viewing the message &quot;Thank you for your order!&quot;" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" Then finish message  should be  an element containing only 'Thank you for your order!'" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" Then Verify that the purchase was successful by viewing the message &quot;Thank you for your order!&quot; (completed)" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" 2: add multiples products to the shopping cart ({email=standard_user, password=secret_sauce, message=Thank you for your order!, name=Mariana, lastName=Uribe, codePostal=05555, quantity=2}) (completed)" width="1366"/>
+                <img src="617f1f8673a8f1dca39bfa514c445b81effc9b68a95d988b37fee6b75974ed91.png" title=" 3: add multiples products to the shopping cart ({email=standard_user, password=secret_sauce, message=Thank you for your order!, name=Mariana, lastName=Uribe, codePostal=05555, quantity=3})" width="1366"/>
+                <img src="617f1f8673a8f1dca39bfa514c445b81effc9b68a95d988b37fee6b75974ed91.png" title=" Given User enters saucedemo site" width="1366"/>
+                <img src="617f1f8673a8f1dca39bfa514c445b81effc9b68a95d988b37fee6b75974ed91.png" title=" Mariana opens the Saucedemo login" width="1366"/>
+                <img src="617f1f8673a8f1dca39bfa514c445b81effc9b68a95d988b37fee6b75974ed91.png" title=" Given User enters saucedemo site (completed)" width="1366"/>
+                <img src="ced0bfb59bd37eb3dd211c030934c291bc1956dcc0430963b1fd2b72f0800308.png" title=" And User login with &quot;standard_user&quot; and &quot;secret_sauce&quot;" width="1366"/>
+                <img src="ced0bfb59bd37eb3dd211c030934c291bc1956dcc0430963b1fd2b72f0800308.png" title=" Mariana credentials introduction" width="1366"/>
+                <img src="ced0bfb59bd37eb3dd211c030934c291bc1956dcc0430963b1fd2b72f0800308.png" title=" Mariana enters 'standard_user' into user name" width="1366"/>
+                <img src="acf22bdccfe5fc136d81d50101fdedd6ed3c1ebbe6c4a5cc14e5856aef9c4c47.png" title=" Mariana enters 'secret_sauce' into password" width="1366"/>
+                <img src="c4f1e379fabfc5981bc0ad90d7642fcc32babc9d12854d1a3ed9110ad7eed1f4.png" title=" Mariana clicks on Login btn" width="1366"/>
+                <img src="c4f1e379fabfc5981bc0ad90d7642fcc32babc9d12854d1a3ed9110ad7eed1f4.png" title=" Mariana credentials introduction (completed)" width="1366"/>
+                <img src="c4f1e379fabfc5981bc0ad90d7642fcc32babc9d12854d1a3ed9110ad7eed1f4.png" title=" And User login with &quot;standard_user&quot; and &quot;secret_sauce&quot; (completed)" width="1366"/>
+                <img src="09003ddad929a80b97487cb11ed74e553a0b0356aec7d20fa21d18d5d49156c8.png" title=" When user add &quot;3&quot; products to the shopping cart" width="1366"/>
+                <img src="09003ddad929a80b97487cb11ed74e553a0b0356aec7d20fa21d18d5d49156c8.png" title=" Mariana select products" width="1366"/>
+                <img src="09003ddad929a80b97487cb11ed74e553a0b0356aec7d20fa21d18d5d49156c8.png" title=" Mariana clicks on [[FirefoxDriver: firefox on WINDOWS (51eb5cd8-1ca4-4f8f-ae2e-88349a8ba29b)] -&gt; xpath: //button[contains(@id, 'add-to-cart')]]" width="1366"/>
+                <img src="fc8a4ee1203ecf811890e1534a224b0555f6ba75e1800b9885b2cdc980658476.png" title=" Mariana clicks on [[FirefoxDriver: firefox on WINDOWS (51eb5cd8-1ca4-4f8f-ae2e-88349a8ba29b)] -&gt; xpath: //button[contains(@id, 'add-to-cart')]]" width="1366"/>
+                <img src="894c5f5eff35fd3c7100e09bdcef72975a90e6d6d955feed30afe5df2122f3e5.png" title=" Mariana clicks on [[FirefoxDriver: firefox on WINDOWS (51eb5cd8-1ca4-4f8f-ae2e-88349a8ba29b)] -&gt; xpath: //button[contains(@id, 'add-to-cart')]]" width="1366"/>
+                <img src="894c5f5eff35fd3c7100e09bdcef72975a90e6d6d955feed30afe5df2122f3e5.png" title=" Mariana select products (completed)" width="1366"/>
+                <img src="894c5f5eff35fd3c7100e09bdcef72975a90e6d6d955feed30afe5df2122f3e5.png" title=" When user add &quot;3&quot; products to the shopping cart (completed)" width="1366"/>
+                <img src="b39fbc198f9015bb57047bf99aaa05f747273fc0d504a0bfa4fac0f178301af4.png" title=" And user verifies that products of the shopping cart is the same one that was selected" width="1366"/>
+                <img src="b39fbc198f9015bb57047bf99aaa05f747273fc0d504a0bfa4fac0f178301af4.png" title=" Mariana select shopping cart" width="1366"/>
+                <img src="b39fbc198f9015bb57047bf99aaa05f747273fc0d504a0bfa4fac0f178301af4.png" title=" Mariana clicks on shopping cart" width="1366"/>
+                <img src="4e6078438276ab5eb45a9668279220d6be83d8fe7e2653b6a10277994cf7e685.png" title=" Mariana clicks on cheackout btn " width="1366"/>
+                <img src="4e6078438276ab5eb45a9668279220d6be83d8fe7e2653b6a10277994cf7e685.png" title=" Mariana select shopping cart (completed)" width="1366"/>
+                <img src="4e6078438276ab5eb45a9668279220d6be83d8fe7e2653b6a10277994cf7e685.png" title=" Then validation cart" width="1366"/>
+                <img src="4e6078438276ab5eb45a9668279220d6be83d8fe7e2653b6a10277994cf7e685.png" title=" And user verifies that products of the shopping cart is the same one that was selected (completed)" width="1366"/>
+                <img src="4e6078438276ab5eb45a9668279220d6be83d8fe7e2653b6a10277994cf7e685.png" title=" And Complete the purchase form with information &quot;Mariana&quot;, &quot;Uribe&quot; and &quot;05555&quot;" width="1366"/>
+                <img src="4e6078438276ab5eb45a9668279220d6be83d8fe7e2653b6a10277994cf7e685.png" title=" Mariana cheackout" width="1366"/>
+                <img src="4e6078438276ab5eb45a9668279220d6be83d8fe7e2653b6a10277994cf7e685.png" title=" Mariana clicks on first name" width="1366"/>
+                <img src="4390000c1ba67c95cf5730372966216c812cd99bb995937aa3995639c90cdd46.png" title=" Mariana enters 'Mariana' into first name" width="1366"/>
+                <img src="fa0a71bd9b4a526d2f6618e96377a5f7d5992fce28af9f54526a553447da74d3.png" title=" Mariana enters 'Uribe' into last name" width="1366"/>
+                <img src="ff171333f16f7255d4595e7581c5a9d764b1595683ed8318bbf51a2d19ef675e.png" title=" Mariana enters '05555' into postal code" width="1366"/>
+                <img src="1a0b522fd15d4294da478f912cc05abd03f2ccca05a108c244aea43b1c1defba.png" title=" Mariana clicks on continue btn " width="1366"/>
+                <img src="1a0b522fd15d4294da478f912cc05abd03f2ccca05a108c244aea43b1c1defba.png" title=" Mariana cheackout (completed)" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" Mariana checkout overview" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" Mariana clicks on finish btn " width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" Mariana checkout overview (completed)" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" And Complete the purchase form with information &quot;Mariana&quot;, &quot;Uribe&quot; and &quot;05555&quot; (completed)" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" Then Verify that the purchase was successful by viewing the message &quot;Thank you for your order!&quot;" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" Then finish message  should be  an element containing only 'Thank you for your order!'" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" Then Verify that the purchase was successful by viewing the message &quot;Thank you for your order!&quot; (completed)" width="1366"/>
+                <img src="697dfa451d9c6615dc144ade520b8e1b0a230b19d51c124debac30d9f8d2c609.png" title=" 3: add multiples products to the shopping cart ({email=standard_user, password=secret_sauce, message=Thank you for your order!, name=Mariana, lastName=Uribe, codePostal=05555, quantity=3}) (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.1.1</span>
+</div>
+</body>
+</html>

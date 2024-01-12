@@ -4,24 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03e888eb-f7dd-48a8-810b-a920a1effc5f" name="Changes" comment="prueba saucedemo">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="03e888eb-f7dd-48a8-810b-a920a1effc5f" name="Changes" comment="prueba saucedemo&#10;actulizacion para agregar mas de un producto al carrito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/models/Overview.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/questions/ValidationCart.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/questions/ValidationOverview.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/Cheackout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/Cheackout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/CheckoutOverview.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/CredentialsIntroduction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/CredentialsIntroduction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/SelectMultipleProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/SelectProducts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/SelectProduct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/SelectShoppingCart.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/task/SelectShoppingCartMultipleProducts.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/userinterfaces/CheackoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/userinterfaces/CheackoutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/userinterfaces/SaucedemoHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/userinterfaces/SaucedemoHomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/stepdefinitions/saucedemoStepdefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/stepdefinitions/saucedemoStepdefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/saucedemo.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/saucedemo.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,12 +163,31 @@
       <option name="project" value="LOCAL" />
       <updated>1705034509708</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="prueba saucedemo&#10;actulizacion para agregar mas de un producto al carrito">
+      <created>1705099628116</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705099628116</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="prueba saucedemo" />
-    <option name="LAST_COMMIT_MESSAGE" value="prueba saucedemo" />
+    <MESSAGE value="prueba saucedemo&#10;actulizacion para agregar mas de un producto al carrito" />
+    <option name="LAST_COMMIT_MESSAGE" value="prueba saucedemo&#10;actulizacion para agregar mas de un producto al carrito" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
